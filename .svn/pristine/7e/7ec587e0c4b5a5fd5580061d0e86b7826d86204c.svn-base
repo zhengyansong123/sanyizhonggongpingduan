@@ -1,0 +1,65 @@
+/* pages/items/transactionDetails/index.wxss */
+
+/* 表格布局 */
+
+#panel {
+  background: #fff;
+}
+
+#panel text {
+  line-height: 13vh;
+  border-right: 1rpx solid #ddd;
+  border-bottom: 1rpx solid #ddd;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.flex-cell {
+  flex: 1;
+}
+
+.rowitem {
+  margin: 10px 15px;
+  font-size: 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.item1 {
+  padding-right: 40px;
+}
+
+.item3 {
+  float: right;
+  color: orange;
+}
+
+.tab {
+  width: 500rpx;
+  height: 80rpx;
+  border: 1rpx solid #ff8b00;
+  border-radius: 40rpx;
+  display: flex;
+  justify-content: space-around;
+  color: #ff8b00;
+  text-align: center;
+  line-height: 80rpx;
+  margin-left: 120rpx;
+  margin-top: 10rpx;
+}
+.list{
+  width: 50%;
+  border-radius: 45rpx
+}

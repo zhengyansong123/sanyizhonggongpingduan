@@ -1,0 +1,69 @@
+.depositView {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: #fff;
+}
+
+.depositBlock {
+  background-color: #fff;
+  margin-top: 30rpx;
+}
+
+.currentMoney {
+  display: flex;
+  flex-flow: row;
+  line-height: 80rpx;
+  margin-left: 40rpx;
+  width: 710rpx;
+  height: 80rpx;
+  font-size: 38rpx;
+  font-weight: body;
+}
+
+.varietyMoney {
+  /* height: 280rpx; */
+}
+
+.chioce {
+  position: absolute;
+  width: 330rpx;
+  height: 145rpx;
+  border-radius: 20rpx;
+  border: 2rpx solid #ff8b00;
+  line-height: 145rpx;
+}
+
+.depositBtn {
+  /* margin-top: 200rpx; */
+  width: 670rpx;
+  height: 80rpx;
+  margin-left: 40rpx;
+  color: #fff;
+  line-height: 80rpx;
+  border-radius: 40rpx;
+  margin-top:375rpx;
+  background: -webkit-linear-gradient(left, #ff7200, #ff8b00); /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(right, #ff7200, #ff8b00); /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(right, #ff7200, #ff8b00); /* Firefox 3.6 - 15 */
+  background: linear-gradient(to right, #ff7200, #ff8b00); /* 标准的语法（必须放在最后） */
+}
+
+.text1 {
+  position: absolute;
+  display: flex;
+  flex-flow: row;
+  font-size: 30rpx;
+  bottom: 110rpx;
+  color: #7c7d7f;
+  width: 100%;
+}
+
+.text2 {
+  color: #7c7d7f;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  font-size: 30rpx;
+  bottom: 60rpx;
+}

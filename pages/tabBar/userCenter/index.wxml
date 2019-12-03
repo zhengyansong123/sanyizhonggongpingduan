@@ -1,0 +1,99 @@
+<view class="content">
+  <view class="avatar-item">
+    <view class="border">
+      <view class="userinfo-avatar">
+        <open-data type="userAvatarUrl"></open-data>
+      </view>
+    </view>
+  </view>
+
+  <view class="userinfo-nickname">
+    <open-data type="userNickName"></open-data>
+  </view>
+  <view wx:if="{{userInfo !== ''}}">
+    <view>
+      <text class="userinfo-nickname">{{ phoneNumber == null ? '' :phoneNumber}}</text>
+    </view>
+    <view>
+      <span class="{{mobileBtnShow?'':'hide'}}">
+        <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" class="zhoupeilong">绑定手机号</button>
+      </span>
+    </view>
+  </view>
+</view>
+
+
+<view class="page">
+  <view class="page-content">
+    <view class="page-body-item" data-url="{{myChargeUrl}}" bindtap='toCheckUser'>
+      <image mode='aspectFit' src="../../../images/my-charge.png" class="iconClass"></image>
+      <text class='p p1'>我的充电</text>
+      <image src="../../../images/more.png" class="moreImg"></image>
+    </view>
+    <view class="page-body-item" data-url="{{myWalletUrl}}" bindtap='toCheckUser'>
+      <image mode='aspectFit' src="../../../images/wallet.png" class="iconClass"></image>
+      <text class='p p2'>我的钱包</text>
+      <image src="../../../images/more.png" class="moreImg"></image>
+    </view>
+    <!-- <navigator url='{{myChargeUrl}}'>
+      <view class="page-body-item">
+        <image mode='aspectFit' src="../../../images/my-charge.png" class="iconClass"></image>
+        <text class='p1'>我的充电</text>
+      </view>
+  </navigator>
+  <navigator url='{{myWalletUrl}}'>  
+    <view class="page-body-item">
+      <image mode='aspectFit' style='width:37rpx;' src="../../../images/wallet.png" class="iconClass"></image>
+      <text class='p2'>我的钱包</text>
+    </view>
+  </navigator> -->
+    <!-- <navigator url='{{inviteJoinUrl}}'>  
+    <view class="page-body-item">
+      <image mode='aspectFit' src="../../../images/inviteJoin.png" class="iconClass"></image>
+      <text class='p3'>我的邀请</text>
+    </view>
+  </navigator> -->
+    <navigator url='{{helpCenterUrl}}'>
+      <view class="page-body-item">
+        <image mode='aspectFit' style='width:30rpx;' src="../../../images/helpCenter.png" class="iconClass"></image>
+        <text class='p p4'>帮助中心</text>
+        <image src="../../../images/more.png" class="moreImg"></image>
+      </view>
+    </navigator>
+    <navigator url='{{aboutUsUrl}}'>
+      <view class="page-body-item">
+        <image mode='aspectFit' src="../../../images/aboutUs.png" class="iconClass"></image>
+        <text class='p p5'>关于我们</text>
+        <image src="../../../images/more.png" class="moreImg"></image>
+      </view>
+    </navigator>
+
+    <view class="page-body-item">
+      <image mode='aspectFit' src="../../../images/version.png" class="iconClass"></image>
+      <text class='p p6'>版本号：{{version}}</text>
+    </view>
+  </view>
+  <!-- <view wx:if="{{userInfo === ''}}" bindtap='toAuthorize'>
+      <view class="routing">
+      <image src="../../../images/routing.png"></image>
+      </view>
+  </view>
+    <view wx:else>
+    <navigator url='{{chargingUrl}}' hover-class="none">
+      <view class="routing">
+      <image src="../../../images/charging.png"></image>
+      </view>
+    </navigator>
+    </view> -->
+  <navigator url='{{authorizeUrl}}' hover-class="none" wx:if="{{userInfo === ''}}">
+    <view class="routing">
+      <image src="../../../images/routing.png"></image>
+    </view>
+  </navigator>
+  <navigator url='{{chargingUrl}}' hover-class="none" wx:else>
+    <view class="routing">
+      <image src="../../../images/charging.png"></image>
+    </view>
+  </navigator>
+
+</view>

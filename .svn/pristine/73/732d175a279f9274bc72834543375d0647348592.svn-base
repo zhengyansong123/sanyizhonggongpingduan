@@ -1,0 +1,85 @@
+<!--pages/index/coupon/coupon.wxml-->
+
+
+
+<view scroll-y="true" class="container">
+
+  <!-- 活动图片 -->
+  <view>
+    <image class="img" mode='widthFix' src='https://api.znpoo.com/wxPicture/coupon_activity_new.jpg?v={{nowDate}}'></image>
+  </view>
+
+  <!-- 邀请按钮 -->
+  <!-- <view bindtap='onShareAppMessage'>
+    <image class="img" mode='widthFix' src='https://api.znpoo.com/wxPicture/coupon_button.jpg'></image>
+  </view> -->
+  <!-- 活动规则 -->
+  <!-- <view>
+    <image class="img" mode='widthFix' src='https://api.znpoo.com/wxPicture/coupon_rule.jpg'></image>
+  </view> -->
+  <!-- 活动说明 -->
+  <!-- <view class="activity-desc" bindtap='activityShow'>
+    <text>活动说明></text>
+  </view>  -->
+
+  <!-- 惊喜二 -->
+  <!-- <view class="surprise2">
+    <view>成功邀请5位好友 可获得 50元</view>
+    <view>成功邀请10位好友 可获得 100元</view>
+    <view>成功邀请15位好友 可获得 150元</view>
+    <view>成功邀请20位好友 可获得 200元</view>
+    <view>成功邀请25位好友 可获得 300元</view>
+  </view> -->
+
+  <!-- 全国榜单 TOP20 -->
+  <!-- <view class="ranking-list1">
+    <view>第1名</view>
+    <view>第2名</view>
+    <view>第3名</view>
+  </view>
+  <view class="ranking-list2">
+    <view>4</view>
+    <view>5</view>
+    <view>6</view>
+    <view>7</view>
+    <view>8</view>
+    <view>9</view>
+    <view>10</view>
+    <view>11</view>
+    <view>12</view>
+    <view>13</view>
+    <view>14</view>
+    <view>15</view>
+  </view> -->
+</view>
+
+
+<!-- 转发给好友 -->
+  <view style='display:flex;flex-direction:column;align-items:center;'>
+  <view class="forward">
+    <button style='background-color: #ff8b00;color:white;' open-type="share">转发给好友</button>
+  </view>
+</view> 
+
+
+
+
+
+<!-- 遮罩层 -->
+<modal class="modal" hidden="{{modalFlag}}" no-cancel bindconfirm="activityShow" confirmText="我知道了">
+  <view class="dew">
+    <!-- <image src="../../images/ts.png" alt="" class="age"></image> -->
+    <view class="vedw">根据您当前所在位置，向您推荐以下服务站点，该服务点服务范围周边3公里</view>
+    <view class="po_w">
+
+      <block wx:for="{{agentList}}" wx:for-item="a" wx:key="a.name">
+        <view class="ved">
+          <view class="titd">{{a.name}}</view>
+          <view class="addd">{{a.cityName}}{{a.districtName}}{{a.address}}</view>
+        </view>
+      </block>
+
+    </view>
+
+  </view>
+</modal>

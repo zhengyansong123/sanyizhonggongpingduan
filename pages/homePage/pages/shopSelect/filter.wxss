@@ -1,0 +1,336 @@
+@import "../../../../component/wxSearch/wxSearch.wxss";
+
+page {
+  height: 100%;
+}
+
+.page {
+  font-family: 'PingFang SC',
+                 'Helvetica Neue',
+                 Helvetica,
+                 'Droid Sans Fallback',
+                 'Microsoft Yahei',
+                 sans-serif;
+  height: 100%;
+  background: #fff;
+  overflow: hidden;
+}
+
+.noResult2 {
+  text-align: center;
+  margin: 10rpx 10rpx 10rpx 10rpx;
+  height: 350px;
+  width: 350px;
+}
+
+.filter-tab {
+  display: flex;
+  width: 100%;
+  line-height: 80rpx;
+  border-bottom: 1rpx solid #ddd;
+  position: relative;
+  z-index: 2;
+  background: #fff;
+}
+
+.filter-tab text {
+  flex: 1;
+  text-align: center;
+}
+
+.filter-tab text:after {
+  content: '';
+  display: inline-block;
+  vertical-align: 4rpx;
+  width: 0;
+  height: 0;
+  border-left: 12rpx solid transparent;
+  border-right: 12rpx solid transparent;
+  border-top: 12rpx solid #bbb;
+  margin-left: 8rpx;
+}
+
+.filter-tab text.active {
+  color: #39f;
+}
+
+.filter-tab:not(.sort-tab) text.active:after {
+  border-top: 0;
+  border-bottom: 12rpx solid #39f;
+}
+
+.filter-tab.sort-tab text.active:after {
+  border-top: 12rpx solid #39f;
+}
+
+.filter-panel {
+  display: flex;
+  background: #eee;
+  position: absolute;
+  width: 100%;
+  z-index: 13;
+  overflow: hidden;
+}
+
+.filter-panel-left, .filter-panel-right {
+  flex: 1;
+  line-height: 80rpx;
+  text-align: center;
+  max-height: 480rpx;
+  overflow-y: auto;
+}
+
+.filter-panel-left .active {
+  background: #fff;
+  color: #39f;
+}
+
+.filter-panel-right .active {
+  color: #39f;
+}
+
+.filter-panel-right .active {
+  color: #39f;
+}
+
+.filter-panel-left .sortActive {
+  color: #39f;
+}
+
+.filter-panel-right {
+  background: #fff;
+}
+
+.filter-panel-right:empty {
+  display: none;
+}
+
+.filter-shadow {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.gototop {
+  position: fixed;
+  bottom: 20rpx;
+  right: 20rpx;
+  transition: all 0.3s;
+  opacity: 0;
+  transform: translateY(200rpx) rotate(180deg);
+}
+
+.gototop.active {
+  opacity: 0.7;
+  transform: translateY(0) rotate(180deg);
+}
+
+.test-item {
+  display: flex;
+  flex-direction: row;
+  padding: 20rpx;
+  border-bottom: 1rpx solid #ddd;
+}
+
+.textNum {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.textAddr {
+  font-size: 13px;
+  margin-bottom: 8px;
+  color: #999;
+  width: 400rpx;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.textName {
+  font-size: 15px;
+  font-family: MicrosoftYaHei;
+  color: #333;
+  font-weight: bold;
+}
+
+.textClass {
+  padding-left: 17px;
+  width: 100%;
+}
+
+.textNum1 {
+  margin-right: 10px;
+  color: green;
+}
+
+.textNum2 {
+  margin-right: 10px;
+  color: blue;
+}
+
+.quyu {
+  position: relative;
+  display: none;
+  height: 450rpx;
+  z-index: 5;
+}
+
+.quyu .qy {
+  overflow-y: scroll;
+  float: left;
+  width: 33.33%;
+  height: 450rpx;
+  line-height: 80rpx;
+  box-sizing: border-box;
+  font-size: 14px;
+  color: #717273;
+}
+
+.qy view {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  padding-left: 15rpx;
+}
+
+.quyu-left {
+  background: #c5c5c5;
+}
+
+.quyu-center {
+  background: #e0e0e0;
+}
+
+.quyu-right {
+  background: #fff;
+}
+
+.quyu-right view {
+  border-bottom: 1px solid #c5c5c5;
+}
+
+.slidown {
+  display: block;
+  animation: slidown 0.7s ease-in both;
+}
+
+.slidup {
+  display: block;
+  animation: slidup 0.7s ease-in both;
+}
+
+.disappear {
+  display: none;
+}
+
+.current {
+  background: #e0e0e0;
+}
+
+.current2 {
+  background: #fff;
+}
+
+.page_row {
+  display: flex;
+  flex-direction: row;
+  margin-top: 15rpx;
+}
+
+.invoice-button {
+  font-size: 15px;
+  width: 188rpx;
+  line-height: 50rpx;
+  background-color: #ff8b00;
+  border-radius: 48rpx;
+  color: #fefefe;
+}
+
+
+
+/* .search{  
+      width: 80%;  
+    }  
+    .search_arr {  
+      border: 1px solid #d0d0d0;  
+      border-radius: 10rpx;  
+      margin-left: 20rpx;  
+    }  
+    .search_arr input{  
+      margin-left: 60rpx;  
+      height: 60rpx;  
+      border-radius: 5px;  
+    }  
+    .bc_text {  
+      line-height: 68rpx;  
+      height: 68rpx;  
+      margin-top: 34rpx;  
+    }  
+      
+    .sousuo {  
+      margin-left: 15rpx;  
+      width: 15%;  
+      line-height: 150%;  
+      text-align: center;  
+      border: 1px solid #d0d0d0;  
+      border-radius: 10rpx;  
+    }  
+    .page_row{  
+      display: flex;  
+      flex-direction: row;
+      margin-top: 15rpx;  
+    }  
+    .searchcion {  
+      margin: 10rpx 10rpx 10rpx 10rpx;  
+      position: absolute;  
+      left:25rpx;  
+      z-index: 2;  
+      width: 20px;  
+      height: 20px;  
+      text-align: center;  
+    }    */
+
+/*首页跑马灯效果*/
+
+@keyframes around {
+  from {
+    margin-left: 100%;
+  }
+
+  to {
+    /* var接受传入的变量 */
+    margin-left: var(--marqueeWidth--);
+  }
+}
+
+.marquee_container {
+  background-color: #fe4655;
+  height: 50rpx;
+  line-height: 44rpx;
+  position: relative;
+  width: 100%;
+  margin-top: 0rpx;
+}
+
+.marquee_container:hover {
+  /* 不起作用 */
+  animation-play-state: paused;
+}
+
+.marquee_text {
+  /* color:#fff; */
+  font-size: 28rpx;
+  display: inline-block;
+  white-space: nowrap;
+  animation-name: around;
+  animation-duration: 10s; /*过渡时间*/
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+/*首页跑马灯效果*/

@@ -1,0 +1,50 @@
+<!--pages/warn/index.wxml-->
+<view class="container">
+  <view class="action">
+    <view class="title">
+      <text>请选择故障类型 </text>
+    </view>
+    <view class="choose">
+      <!-- <checkbox-group bindchange="checkboxChange" class="choose-grids">
+        <block wx:for="{{itemsValue}}" wx:key="{{item}}">
+          <view class="grid">
+            <checkbox value="{{item.value}},{{item.id}}" checked="{{item.checked}}" color="{{item.color}}" />{{item.value}}
+          </view>
+        </block>
+      </checkbox-group> -->
+
+      <!-- 选择故障类型按钮 -->
+      <block wx:for="{{itemsValue}}" wx:key="{{item}}">
+        <view class="grid {{item.checked ?'checkOn':''}}" bindtap='chooseWarn' data-value='{{item.value}}' data-id='{{item.id}}'>
+          {{item.value}}
+        </view>
+      </block>
+
+    </view>
+
+    <view class="title">
+      <text>请拍摄周围环境，便于维护</text>
+    </view>
+    <view class="action-photo">
+      <block wx:for="{{picUrls}}" wx:key="{{item}}" wx:index="{{index}}">
+        <image src="{{item}}">
+          <icon type="cancel" data-index=" {{index}}" color="red" size="18" class="del" bindtap="delPic" />
+        </image>
+      </block>
+      <text class="add" bindtap="bindCamera">{{actionText}}</text>
+    </view>
+
+    <view class='title'>
+      <text>设备号</text>
+    </view>
+    <view class="action-input">
+      <input bindinput="numberChange" name="number" value="{{inputValue.num}}" placeholder="请填写设备号" placeholder-style="line-height:97rx"/>
+      <input bindinput="descChange" name="desc" placeholder="备注" maxlength="50" style='height:180rpx'value='{{inputValue.desc}}' />
+    </view>
+
+
+    <!-- <view class="action-submit"> -->
+    <button class="submit-btn" loading="{{loading}}" bindtap="formSubmit">提交</button>
+    <!-- </view> -->
+  </view>
+</view>

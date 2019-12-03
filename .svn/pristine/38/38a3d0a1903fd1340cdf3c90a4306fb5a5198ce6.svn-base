@@ -1,0 +1,39 @@
+<!--pages/investment/investment.wxml-->
+
+<view class='container'>
+  <view class='content_text'><text>城市合伙人招募</text></view>
+  <view class='content_image'>
+    <image src='https://api.znpoo.com/wxPicture/zs_1.jpg'></image>
+  </view>
+  <view class='content_image'>
+    <image src='https://api.znpoo.com/wxPicture/zs_2.jpg'></image>
+  </view>
+  <view class='content_image'>
+    <image src='https://api.znpoo.com/wxPicture/zs_3.jpg'></image>
+  </view>
+  <view class='content_image'>
+    <image src='https://api.znpoo.com/wxPicture/zs_4.jpg'></image>
+  </view>
+  <view class='content_image'>
+    <image src='https://api.znpoo.com/wxPicture/zs_5.jpg'></image>
+  </view>
+  <view class='content_image'>
+    <image src='https://api.znpoo.com/wxPicture/zs_6.jpg'></image>
+  </view>
+  <view class='content_image'>
+    <image src='https://api.znpoo.com/wxPicture/zs_7.jpg'></image>
+  </view>
+  <view class='content_image'>
+    <image src='https://api.znpoo.com/wxPicture/zs_8.jpg'></image>
+  </view>
+  <view class='content_image'>
+    <image src='https://api.znpoo.com/wxPicture/zs_9.jpg'></image>
+  </view>
+  <view class='content_image'>
+    <image src='https://api.znpoo.com/wxPicture/zs_10.jpg'></image>
+  </view>
+  <view class='content_image'>
+    <image src='https://api.znpoo.com/wxPicture/zs_11.jpg'></image>
+  </view>
+
+</view>

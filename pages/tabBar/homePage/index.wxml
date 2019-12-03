@@ -1,0 +1,82 @@
+<!--pages/tabBar/homePage/index.wxml-->
+
+<!-- 弹窗 -->
+
+<view class='Popup' wx:for='{{initData.popupData}}' wx:key='item.name' wx:if='{{flag}}'>
+      <image src='{{item.image}}' style='width:75%;height:58%;margin:88rpx;margin-top:3;border-radius:15rpx' bindtap='handleClick' 
+      data-tourl="{{item.toUrl}}" data-subjectType="{{item.subjectType}}" data-urlType="{{item.urlType}}"/>
+      <view catchtap='closePoup' class='closePoup'> X </view>
+</view>
+
+<!-- 地址切换 -->
+<view class='down-arrow' bindtap='bindCityChange'>
+  <text>{{queryCity}}</text>
+</view>
+
+<!-- 轮播图 -->
+<view class="banner" style='background-color:#E5E5E5'>
+  <swiper indicator-dots="{{imageSwiperProp.indicatorDots}}" vertical="{{imageSwiperProp.vertical}}" autoplay="{{imageSwiperProp.autoplay}}" interval="{{imageSwiperProp.interval}}" circular="{{imageSwiperProp.circular}}" duration="{{imageSwiperProp.duration}}" indicator-color="rgba(255, 255, 255, 0.8)"
+    indicator-active-color="rgba(255, 255, 255, 0.3)" >
+    <block wx:for-items="{{initData.swapperImages}}" wx:for-item="imageItem" wx:key="*imageItem">
+      <swiper-item>
+        <block>
+          <image style='width:100%;height:100%;' src="{{imageItem.image}}" mode="scaleToFill" bindtap='handleClick' data-index='{{index}}' data-tourl="{{imageItem.toUrl}}" data-subjectType="{{imageItem.subjectType}}" data-urlType="{{imageItem.urlType}}" data-id="{{imageItem.id}}" />
+        </block>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+
+
+<!-- 九宫格 -->
+<view class="grid" >
+  <view class="grid-item" wx:for="{{initData.gridData}}" wx:key="item.name" bindtap='handleClick' data-tourl="{{item.toUrl}}" data-subjectType="{{item.subjectType}}" data-urlType="{{item.urlType}}" data-id="{{item.id}}" >
+    <view >
+      <image src="{{item.image}}" style='background-color:#E5E5E5;border-radius:50%'></image>
+    </view>
+    <view>
+      <text>{{item.subjectName}}</text>
+    </view>
+  </view>
+</view>
+
+
+<!-- 屏端商品 -->
+<!-- <view class="activity"  wx:if='{{show}}'>
+  <view class="activity-title">
+    <text>屏端商品</text>
+  </view>
+  <view>
+    <view class="goods-item" wx:for="{{goodsData}}" wx:key="item.id" bindtap="goOut" data-url="{{item.goodsUrl}}">
+      <view data-id="{{item.id}}" >
+        <image src="{{item.goodsImage}}" style='background-color:#E5E5E5'></image>
+      </view>
+      <view>
+        <text>{{item.goodsName}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="goods-more" bindtap="showGoods">
+    <text>更多商品 >>></text>
+  </view>
+</view> -->
+
+<!-- 活动专题 -->
+<view class="activity">
+  <!-- 标题 -->
+  <view class="activity-title">
+    <text>屏端招商</text>
+  </view>
+
+  <!-- 图片 -->
+  <view>
+    <view wx:for="{{initData.activityData}}" wx:key="*item" >
+      <view class="activity-item" bindtap='handleClick' data-tourl="{{item.toUrl}}" data-subjectType="{{item.subjectType}}" data-urlType="{{item.urlType}}" data-id="{{item.id}}" >
+        <image src="{{item.image}}" style='background-color:#E5E5E5'></image>
+      </view>
+      <view>
+        <text>{{item.goodsName}}</text>
+      </view>
+    </view>
+  </view>
+</view>

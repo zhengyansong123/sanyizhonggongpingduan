@@ -1,0 +1,104 @@
+  
+<!-- <import src="/wxSearch/wxSearch.wxml"/> -->
+
+<!-- <view class="wxSearch-section">
+  <view class="wxSearch-pancel">
+      <input bindinput="wxSearchInput" value="{{wxSearchData.value}}" bindblur="wxSearchBlur" class="wxSearch-input" placeholder="搜索" />
+
+    <button class="wxSearch-button" bindtap="wxSearchFn" size="mini" plain="true">搜索</button>
+  </view>
+</view>
+<template is="wxSearch" data="{{wxSearchData}}"/> -->
+
+
+<view class="container" style='height:100%'>
+
+  <!-- 导航 -->
+  <!-- <view class="filter-tab">
+      <text bindtap="setFilterPanel" data-findex="1" class="{{showfilterindex==1?'active':''}}">{{headShopName}}</text>
+      <text bindtap="setFilterPanel" data-findex="2" class="{{showfilterindex==2?'active':''}}">{{headAreaName||originalHeadAreaName}}</text>
+      <text bindtap="setFilterPanel" data-findex="3" class="{{showfilterindex==3?'active':''}}">{{headSortName}}</text>
+    </view> -->
+
+  <view class="filter-flex">
+  
+    <view class="filter-content" wx:if="{{showfilter}}">
+      <!-- 商家 -->
+      <view class="filter-panel" wx:if="{{showfilterindex==1}}">
+        <view class="filter-panel-left">
+          <view wx:for="{{filterdata.cate}}" wx:key="{{item.id}}" catchtap="setCateIndex" data-cateName="{{item.label}}" data-cateindex="{{index}}" data-cateid="{{item.value}}" class="{{cateindex==index?'active':''}}">{{item.label}}</view>
+        </view>
+        <view class="filter-panel-right">
+          <view wx:for="{{filterdata.cate[cateindex].cate_two}}" wx:key="{{item.id}}" catchtap="setSubcateIndex" data-subcateindex="{{index}}" data-subcateid="{{item.value}}" data-subcateName="{{item.label}}" class="{{subcateindex==index?'active':''}}">{{item.label}}</view>
+        </view>
+      </view>
+
+      <!-- 区域 -->
+      <view class="filter-panel" wx:if="{{showfilterindex==2}}">
+        <view class="filter-panel-left">
+          <view class="{{searchArea1 == item.name ? 'active' : ''}}" wx:for="{{cityleft}}" bindtap="selectleft" data-value="{{item.name}}" data-province='{{item.code}}'>
+            {{item.name}}
+          </view>
+        </view>
+        <view class="filter-panel-left">
+          <view class="{{searchArea2 == item.name ? 'active' : ''}}" wx:for="{{citycenter}}" bindtap="selectcenter" data-value="{{item.name}}"  data-city='{{item.code}}'>
+            {{item.name}}
+          </view>
+        </view>
+        <view class="filter-panel-right">
+          <view  class="{{searchArea3 == item.name?'active':''}}" wx:for="{{cityright}}" bindtap="selectright" data-value="{{item.name}}">
+            {{item.name}}
+          </view>
+        </view>
+      </view>
+
+      <!-- 排序 -->
+      <view class="filter-panel" wx:if="{{showfilterindex==3}}">
+        <view class="filter-panel-left">
+          <view wx:for="{{filterdata.sort}}" wx:key="{{item.id}}" bindtap="setSortIndex" data-sortname="{{item.title}}" data-sortindex="{{index}}" class="{{sortindex==index?'sortActive':''}}">{{item.title}}</view>
+        </view>
+      </view>
+
+    </view>
+    <view class="filter-shadow" wx:if="{{showfilter}}" bindtap="hideFilter"></view>
+  </view>
+
+<view wx:if="{{listShow}}">
+  <scroll-view class="container-body" scroll-y="true" scroll-top="{{scrolltop}}" bindscroll="scrollHandle" lower-threshold="50" bindscrolltolower="scrollLoading">
+    <view class="test-list">
+      <!-- <view class="test-item" wx:for="{{records}}" wx:key="{{item.id}}" bindtap="toDetail" data-longitude="{{item.lng}}" data-latitude="{{item.lat}}"> -->
+      <!-- 取消导航功能 -->
+      <view class="test-item" wx:for="{{records}}" wx:key="{{item.id}}" data-longitude="{{item.lng}}" data-latitude="{{item.lat}}">
+
+        <view class="picClass">
+          <image src="{{item.shopImage}}" style="width:250rpx;height:146rpx;"></image>
+        </view>
+        <view class="textClass">
+          <view class='textName'>{{item.customerName}}</view>
+          <view class='textAddr'>{{item.distance}}｜{{item.address}}</view>
+          
+<!-- <view class="marquee_container" style="--marqueeWidth--:-12em">
+    <view class="marquee_text">{{item.distance}}｜{{item.addressContent}}</view>
+</view> -->
+          <view class='textNum' wx:if = '{{isInvoice}}'>
+            <!-- <view class='textNum1'>设备数量{{item.deviceNum}}台</view> -->
+            <view  wx:if="{{item.invoiceSwitch == '1'}}" catchtap='toInvoice' data-customid="{{item.customId}}" data-enterpriseID="{{item.shopType}}">
+              <button class="invoice-button">开票</button>
+            </view>
+
+            <!-- <view class='textNum2'>提供座充</view> -->
+          </view>
+
+        </view>
+      </view>
+    </view>
+    <icon class="gototop {{scrolltop>200?'active':''}}" bindtap="goToTop" type="download" size="36" color="#3399FF"></icon>
+  </scroll-view>
+  </view>
+
+
+<view class="noResult" wx:if="{{!listShow}}" style='width:100%;height:100%;text-align:center'>
+  <image src='/images/nomessage.png'  style='width:100%;height:100%;'>   </image>
+</view>
+
+</view>

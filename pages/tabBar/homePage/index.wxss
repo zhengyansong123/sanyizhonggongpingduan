@@ -1,0 +1,133 @@
+/* pages/tabBar/homePage/index.wxss */
+
+page {
+  background-color: #f8f8f8;
+}
+
+.down-arrow {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  height: 56rpx;
+  background-color: #ff8b00;
+  color: white;
+}
+
+.down-arrow text {
+  margin-left: 30rpx;
+}
+
+.down-arrow::after {
+  display: inline-block;
+  content: " ";
+  height: 18rpx;
+  width: 18rpx;
+  border-width: 0 3rpx 3rpx 0;
+  border-color: white;
+  border-style: solid;
+  transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+  /* transform-origin: center;
+    transition: transform .3s; */
+  position: absolute;
+  top: 50%;
+  margin-left: 10rpx;
+  margin-top: -17rpx;
+}
+
+/* banner */
+
+.banner swiper {
+  height: 210rpx;
+}
+
+.grid {
+  margin-top: 14rpx;
+  display: flex;
+  background-color: white;
+  flex-wrap: wrap;
+  padding-bottom: 30rpx;
+}
+
+.grid image {
+  height: 84rpx;
+  width: 84rpx;
+  margin-top: 32rpx;
+}
+
+.grid text {
+  font-size: 24rpx;
+}
+
+.grid-item {
+  width: 25%;
+  text-align: center;
+}
+
+.activity {
+  background-color: white;
+  margin-top: 14rpx;
+}
+
+.activity-title {
+  font-size: 30rpx;
+  padding: 30rpx 0 30rpx 30rpx;
+  font-weight: bold;
+}
+
+.activity-item {
+  padding-right: 30rpx;
+  padding-left: 30rpx;
+}
+
+.activity-item image {
+  height: 240rpx;
+  width: 100%;
+}
+
+.goods-item{
+  display: inline-block;
+  width: 30%;
+  padding: 0 12rpx;
+  text-align: center;
+}
+
+.goods-item image {
+  height: 200rpx;
+  width: 100%;
+}
+
+.goods-more{
+  width: 100%;
+  text-align: center;
+  background: #ff8b00;
+  height: 50rpx;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+/* 弹窗 */
+
+.Popup {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 57rpx;
+  z-index: 999;
+}
+
+/* 关闭弹窗按钮 */
+
+.closePoup {
+  border: 2rpx solid #fff;
+  border-radius: 50%;
+  color: #fff;
+  width: 77rpx;
+  height: 77rpx;
+  position: absolute;
+  left: 49%;
+  margin-left: -21rpx;
+  text-align: center;
+  line-height: 77rpx;
+  font-size: 54rpx;
+  top:70%;
+}

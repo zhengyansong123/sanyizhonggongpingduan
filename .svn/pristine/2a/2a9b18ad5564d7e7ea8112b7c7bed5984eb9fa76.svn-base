@@ -1,0 +1,39 @@
+/* pages/items/myCharge/myCharge.wxss */
+
+.hide {
+  display: none;
+}
+
+.rowitem {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  justify-items: center;
+  margin: 10px 15px;
+  font-size: 12px;
+  border-bottom: 1px solid #ddd;
+  padding:0 30rpx 0 30rpx;
+
+}
+
+.rowitem image {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.item1 {
+  padding-right: 40px;
+}
+
+.item3 {
+  float: right;
+  color: orange;
+}
+
+.item-detail{
+  padding-top:23rpx;
+
+}

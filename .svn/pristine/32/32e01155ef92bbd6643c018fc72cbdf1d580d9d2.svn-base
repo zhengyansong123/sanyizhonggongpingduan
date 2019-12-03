@@ -1,0 +1,116 @@
+/* pages/wallet/index.wxss */
+
+.container {
+  background: #f8f8f8;
+  color: #333;
+}
+
+.choose {
+  background-color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 40rpx;
+}
+
+.choose-grids {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 25rpx;
+}
+/* 
+.choose-grids .grid {
+  width: 45%;
+  height: 62rpx;
+  margin-top: 36rpx;
+  border-radius: 12rpx;
+  line-height: 62rpx;
+  border: 2rpx solid #bababa;
+  color: #bababa;
+  text-indent:15rpx;
+} */
+
+/* 故障button */
+.choose .grid {
+  width: 276rpx;
+  height: 64rx;
+  border: 1rpx solid #bababa;
+  line-height: 64rpx;
+  text-align: center;
+  margin: 15rpx 0 15rpx 35rpx;
+  border-radius: 15rpx;
+  color: #bababa;
+}
+
+/* 选中之后修改按钮样式 */
+.choose .checkOn{
+  color: #ff8b00;
+ border: 1rpx solid#ff8b00;
+}
+
+.choose-grids .grid:first-child, .choose-grids .grid:nth-of-type(2) {
+  margin-top: 0;
+}
+
+.action .action-photo {
+  padding-left: 20rpx;
+}
+
+.action .action-photo image {
+  position: relative;
+  display: inline-block;
+  width: 120rpx;
+  height: 120rpx;
+  overflow: visible;
+  margin-left: 25rpx;
+}
+
+.action .action-photo image icon.del {
+  display: block;
+  position: absolute;
+  top: -20rpx;
+  right: -20rpx;
+}
+
+.action .action-photo text.add {
+  display: inline-block;
+  width: 120rpx;
+  height: 120rpx;
+  line-height: 120rpx;
+  text-align: center;
+  font-size: 24rpx;
+  color: #ccc;
+  border: 2rpx dotted #ccc;
+  margin-left: 25rpx;
+  vertical-align: top;
+}
+
+.action .action-input input {
+  background: #fff;
+  height: 97rpx;
+  line-height: 97rpx;
+  margin-bottom: 10rpx;
+  text-indent: 30rpx;
+}
+
+.action  button {
+  border-radius: 7px;
+  color: #fff;
+  background: #ff8b00;
+  width: 90%;
+  position: fixed;
+  bottom: 20rpx;
+  left: 38rpx;
+}
+
+.title {
+  height: 102rpx;
+  line-height: 92rpx;
+  text-indent: 33rpx;
+  font-size: 25rpx;
+}
+
+.title text {
+  border-left: 6rpx solid #ff8b00;
+  padding-left: 15rpx;
+}

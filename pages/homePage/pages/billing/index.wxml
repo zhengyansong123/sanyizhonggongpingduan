@@ -1,0 +1,39 @@
+<!--pages/billing/index.wxml-->
+<view class="container">
+  <view class="bikeid">
+    <view class='current-device'>
+      <text>当前充电设备编号：{{deviceId}}</text>
+      <!-- <text>当前充电设备编号：20181000001</text> -->
+    </view>
+  </view>
+
+  <view class='charging-img'>
+    <image src='/pages/homePage/image/charging.gif' ></image>
+  </view>
+
+
+
+  <view class="time">
+    <view class="time-title">
+      <text>{{actionText}}</text>
+    </view>
+    <view class="time-content">
+
+      <text wx:if="{{hours < 10}}">0{{hours}}:</text>
+      <text wx:else>{{hours}}:</text>
+
+      <text wx:if="{{minutes < 10}}">0{{minutes}}:</text>
+      <text wx:else>{{minutes}}:</text>
+
+      <text wx:if="{{seconds < 10}}">0{{seconds}}</text>
+      <text wx:else>{{seconds}}</text>
+    </view>
+    <view class="time-desc">
+      计时结束后将自动关闭充电
+    </view>
+  </view>
+  <view class="endride">
+    <button style='color:white;background-color:#00a0e9' bindtap="endride" disabled="{{clickBtn}}">结束充电</button>
+    <button style='color:white;background-color:#ff8b00' bindtap="returnIndex">回到首页</button>
+  </view>
+</view>

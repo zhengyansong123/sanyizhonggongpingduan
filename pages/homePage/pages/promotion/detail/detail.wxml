@@ -1,0 +1,88 @@
+<view style='width:100%;'>
+
+  <!-- 轮播图 -->
+  <view style='background-color:white;margin-top:2rpx;padding-bottom:10rpx;'>
+
+
+    <!-- 图片 -->
+    <swiper indicator-dots="{{imageSwiperProp.indicatorDots}}" vertical="{{imageSwiperProp.vertical}}" autoplay="{{imageSwiperProp.autoplay}}" interval="{{imageSwiperProp.interval}}" duration="{{imageSwiperProp.duration}}" indicator-color="rgba(255, 255, 255, 0.8)"
+      indicator-active-color="rgba(255, 255, 255, 0.3)" style="height:434rpx;">
+      <block wx:for-items="{{initData.swapperImages}}" wx:for-item="imageItem" wx:key="{{imageItem.id}}">
+        <swiper-item>
+          <block>
+            <image style='width:100%;height:100%;' src="{{imageItem.url}}" mode="scaleToFill" bindtap='previewImg' data-index='{{index}}' />
+          </block>
+        </swiper-item>
+      </block>
+    </swiper>
+
+
+    <!-- 文字说明 -->
+    <view style=''>
+      <view style='margin-left:30rpx;margin-top:10rpx;'>
+        <text style='font-size:30rpx;font-weight:bold;'>{{initData.promotionName}}</text>
+      </view>
+      <view style='font-size:26rpx;color:#999;margin-left:30rpx;margin-top:1rpx;'>
+        <text> {{initData.promotionDesc}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 店铺信息 -->
+  <view style='margin-top:32rpx;background-color:white;padding:0 30rpx 0 30rpx;'>
+    <view class="enterprise-title">
+      商家信息
+    </view>
+
+    <view class="enterprise-detail" style='display:flex;'>
+      <view style='flex:2;padding-right:35rpx;' bindtap='toEnterpriseMap'>
+        <view>
+          <text style='font-size:14px;font-weight:bold;'>{{initData.enterpriseName}}</text>
+        </view>
+        <view>
+          <image style='width:18rpx;height:24rpx;' src='/images/promotion_location.png'></image>
+          <text style='margin-left:4px;color:#999'>{{initData.addressContent}}</text>
+        </view>
+        <view wx:if="{{initData.showDistance}}">
+          {{initData.distance}}
+        </view>
+      </view>
+         <!-- 拨打电话 -->
+      <!-- <view bindtap='makeCall' style='display:flex;align-items:center'>
+        <image class='detail-phone' mode="scaleToFill" src='/images/phone.png'></image>
+      </view> -->
+    </view>
+  </view>
+
+
+  <!-- 活动需知 -->
+  <view style='margin-top:32rpx;background-color:white;padding:0 30rpx 0 30rpx;height:266px;'>
+    <view class="enterprise-title">
+      活动需知
+    </view>
+
+    <view class="enterprise-notice">
+      <view style='color:#999'>
+        {{initData.promotionDateStr}}
+        <text wx:if="{{initData.supportWeekend == '0'}}">（除周末及法定节假日）</text>
+      </view>
+      <!-- <view>
+        {{initData.promotionDesc}}
+      </view> -->
+      <view style='width:100%;color:#999'>
+        <!-- <textarea  style='width:100%;color:#999;' disabled maxlength='300' value='{{initData.promotionNotice}}'></textarea> -->
+        <block wx:for-items="{{promotionNotice}}"  wx:key="{{index}}">
+          <view> {{item}} </view>
+        </block>
+      
+        
+      </view>
+    </view>
+  </view>
+
+</view>
+
+  <!-- 固定图片 -->
+  <view style='position:fixed;bottom:0;width:100%;height:200rpx;z-index:90;opacity:1'>
+    <image mode="aspectFill" style='width:100%;height:100%;z-index:99;' src='https://api.znpoo.com/wxPicture/promotion-bottom.gif?v=2'></image>
+  </view>

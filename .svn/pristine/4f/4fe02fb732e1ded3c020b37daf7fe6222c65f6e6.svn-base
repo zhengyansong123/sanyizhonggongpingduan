@@ -1,0 +1,24 @@
+<!--pages/authorize/authorize.wxml-->
+<view class="container">
+  <view class="auth-pic">
+    <image mode="aspectFit" src='https://api.znpoo.com/wxPicture/authorize.jpg'></image>
+  </view>
+
+  <view>
+    <view wx:if="{{canIUse}}">
+      <view class="body-desc">屏端 申请获取你的公开信息（昵称、头像等）</view>
+
+      <view class="body-button">
+        <button class="footer-button" bindtap='authClick' open-type="getUserInfo" lang="zh_CN" disabled='{{btnDisabled}}' bindgetuserinfo="onGotUserInfo">授权</button>
+      </view>
+      <view class="body-button">
+        <button class="button-noAuthorize" bindtap='noAuthorize' lang="zh_CN">返回</button>
+      </view>
+    </view>
+    <view wx:else>
+      <view style='color:red;font-size:30rpx;'>
+        为了能让您更好的体验屏端小程序，请升级微信版本
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,40 @@
+/* pages/humor/humor.wxss */
+page{
+  height: 100%; 
+}
+.aaa{
+  width:100%;
+  height:100%;
+background-attachment: fixed;
+/* background-repeat: no-repeat; */
+/* background-size: cover; */
+  background-size:100% 100%;  
+/* background-image: url(https://api.znpoo.com/wxPicture/initPic.png)  */
+}
+
+.pic{
+  width:100%;
+  height:100%;
+}
+
+.pic image{
+  width:100%;
+  height:100%;
+}
+
+.test{
+  position: absolute;
+  top: 20rpx;
+  right: 30rpx;
+  color:#ff8b00;
+}
+
+/* .container image{
+  position:absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+    align-items: center;
+
+} */
+

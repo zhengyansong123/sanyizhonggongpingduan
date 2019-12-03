@@ -1,0 +1,71 @@
+<!--pages/items/transactionDetails/index.wxml-->
+
+
+<!-- <view class="swiper-tab"style='position:fixed'>
+  <view class="swiper-tab-list {{currentTab==1 ? 'on1' : ''}}" data-current="1" bindtap="swichNav" style='width:102rpx'>未使用</view>
+  <view class="swiper-tab-list {{currentTab==2 ? 'on1' : ''}}" data-current="2" bindtap="swichNav" style='width:102rpx'>已激活</view>
+</view> -->
+<view class="tab">
+  <view class="list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">未使用</view>
+  <view class="list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">已激活</view>
+</view>
+
+
+<scroll-view class="{{listShow?'':'hide'}}" style='background:#f8f8f8;position:absolute;top:50px'>
+  <view class="" wx:for="{{records}}" wx:key="{{item.id}}">
+  <view class="rowitemNew" style='position:relative;z-index:999'>
+  <image src='/images/coupon.png' style='width:95%;height:100%;position:absolute;top:7rpx;left:17rpx;'></image>
+      <view class="item-left" style='position:relative;z-index:999'>
+        <view class="coupon_expire">
+          <text class="price">{{item.couponAmount}}</text> <text>元充电券</text>
+          <text style='display:block;background:#fff;width:66%;color:#ff8b00;font-size:24rpx;margin-top:-51rpx;margin-left:63rpx;height:30rpx;line-height:30rpx;text-align:center;'>有效期：{{item.validityBegin}}-{{item.validityEnd}}</text>
+        </view>
+      </view>
+      <view class="item-right" style='position:relative;z-index:999'>
+        <view class="item-r-top" bindtap='activeNow' data-couponid="{{item.id}}">
+        <!-- 剩余金额  -->
+          <view style='font-size:35rpx;color:#ffff;'  wx:if="{{item.status == 'ACTIVITE'}}">
+            剩余<text >{{item.couponBalance}}</text>元
+          </view>
+      <!-- 立即激活 -->
+      <view style='font-size:35rpx;color:#ffff;' wx:if="{{item.status == 'NOT_ACTIVITE'}}">
+            立即 <text>激活</text>
+          </view>
+        </view>
+        <view class="item-r-bottom" bindtap='rule'>
+          <text style='font-size:25rpx;text-indent:-40rpx;'>使用规则  ></text> 
+        </view>
+      </view>
+    </view>
+  </view>
+</scroll-view>
+
+<view class="{{listShow?'hide':''}}" style='width:100%;height:100%;text-align:center'>
+  <image src='/images/nomessage.png'  style='width:100%;height:100%;margin-top:11%;' >   </image>
+</view>
+
+
+<!-- 遮罩层 -->
+<view class="mask" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+<view class="modalDlg" wx:if="{{showModal}}">
+  <scroll-view style='height:520rpx;' scroll-y="true">
+
+    <view class='rule_text'>
+      <text bindtap='toActivity'>
+        1、新用户注册、老用户分享成功后，由系统自动发放充电券至屏端小程序账户中；
+        2、充电券兑换后方可使用，每次使用后系统会自动从优惠券扣费，用户通过查看已激活优惠券了解券面余额；
+        3、充电券自发放之日起半年内兑换，否则自动失效
+        4、充电券兑换成功后，有效期为6个月，即：自兑换之日起6个月内兑换金额有效，6个月后兑换金额自动清零，充电账户余额优先扣除优惠券金额；
+        5、充电券所得金额仅限于屏端充电使用，不能提现或者他用；
+        6、充电券为对应账户的专属优惠券，无法转发或者用于其他账户；
+        7、充电券在全国屏端产品通用，本公司保留对此活动的最终解释权。
+      </text>
+    </view>
+
+  </scroll-view>
+  <view wx:if="{{showModal}}">
+    <view class="activity-button" bindtap="closeActivity">
+      <image src='/images/closeButton.png' style='width:80rpx;height:80rpx;'>   </image>
+    </view>
+  </view>
+</view>

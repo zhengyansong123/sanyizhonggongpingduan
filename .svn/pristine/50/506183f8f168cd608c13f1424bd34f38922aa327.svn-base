@@ -1,0 +1,70 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": false,
+		"minified": true,
+		"newFeature": true,
+		"nodeModules": true,
+		"autoAudits": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.9.1",
+	"appid": "wx30fccf2cda734fc6",
+	"projectname": "wx_charging_front",
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 2,
+			"list": [
+				{
+					"id": 0,
+					"name": "新二维码测试",
+					"pathName": "pages/index2/humor",
+					"query": "scene=20180800072",
+					"scene": "1011"
+				},
+				{
+					"id": -1,
+					"name": "bug测试",
+					"pathName": "pages/index/index",
+					"query": "scene=poc_v1_00000001",
+					"scene": "1011"
+				},
+				{
+					"id": 2,
+					"name": "333",
+					"pathName": "pages/index2/humor",
+					"query": "scene=20181000805"
+				}
+			]
+		}
+	}
+}

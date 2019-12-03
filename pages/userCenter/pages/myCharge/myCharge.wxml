@@ -1,0 +1,17 @@
+<!--pages/items/myCharge/myCharge.wxml-->
+
+
+
+<view class="{{listShow?'':'hide'}}">
+  <view class=""  wx:for="{{records}}" wx:key="{{item.id}}">
+    <view class="global-rowitem">
+      <view class="global-item1">{{item.content}}</view>
+      <view class="global-item2">{{item.createTime}}</view>
+      <view class="global-item3">{{item.amountStr + ' 元'}}</view>
+    </view>
+  </view>
+</view>
+
+<view class="{{listShow?'hide':''}}" style='width:100%;height:100%;text-align:center'>
+  <image src='/images/nomessage.png'  style='width:100%;height:100%;' >   </image>
+</view>

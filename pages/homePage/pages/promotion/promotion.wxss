@@ -1,0 +1,64 @@
+/* pages/index/promition/promotion.wxss */
+
+.menu {
+  width: 100%;
+  height: 100rpx;
+  /* line-height: 80rpx; */
+  background: #f5f5f5;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 32rpx;
+  position: fixed;
+  top: -2rpx;
+  z-index: 9999;
+}
+
+.active {
+  color: #ed6c00;
+}
+
+.noResult2 {
+  text-align: center;
+  margin: 10rpx 10rpx 10rpx 10rpx;
+  height: 350px;
+  width: 350px;
+}
+
+
+.image-left-top {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 120rpx;
+  height: 42rpx;
+}
+
+.picker text {
+  flex: 1;
+  text-align: center;
+}
+
+.picker text:after {
+  content: '';
+  display: inline-block;
+  vertical-align: 4rpx;
+  width: 0;
+  height: 0;
+  border-left: 12rpx solid transparent;
+  border-right: 12rpx solid transparent;
+  border-top: 12rpx solid #bbb;
+  margin-left: 8rpx;
+}
+
+.picker text.active {
+  color: #39f;
+}
+
+.picker:not(.sort-tab) text.active:after {
+  border-top: 0;
+  border-bottom: 12rpx solid #39f;
+}
+
+.picker.sort-tab text.active:after {
+  border-top: 12rpx solid #39f;
+}

@@ -1,0 +1,38 @@
+/* pages/homePage/pages/charging/chargingGuide/chargingGuide.wxss */
+
+
+
+
+page {
+  height: 100%;
+}
+
+.container {
+  width: 100%;
+}
+
+.img {
+  width: 100%;
+  display: block;
+}
+
+.forward {
+  width: 457rpx;
+  bottom: 14rpx;
+  position: fixed;
+  border-radius: 60rpx;
+  overflow: hidden;
+  height:80rpx;
+  background-color: #ff8b00;
+  color:white;
+  border:1rpx solid  #fccf99;
+  line-height:80rpx
+}
+
+.check{
+  border:1rpx solid  #ccc
+}
+
+button::after{
+  border: none
+}

@@ -1,0 +1,21 @@
+/* pages/homePage/pages/goods/goods.wxss */
+.goods-item{
+  margin-top: 10rpx;
+  display: inline-block;
+  width: 30%;
+  padding: 0 12rpx;
+  text-align: center;
+}
+
+.goods-item image {
+  height: 200rpx;
+  width: 100%;
+}
+
+.goods-more{
+  width: 100%;
+  text-align: center;
+  background: #ff8b00;
+  height: 50rpx;
+  color: rgba(0, 0, 0, 0.7);
+}

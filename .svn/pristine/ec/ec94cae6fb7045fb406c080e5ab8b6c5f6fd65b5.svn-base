@@ -1,0 +1,172 @@
+/* pages/items/transactionDetails/index.wxss */
+
+/* 表格布局 */
+
+#panel {
+  background: #fff;
+}
+
+#panel text {
+  line-height: 13vh;
+  border-right: 1rpx solid #ddd;
+  border-bottom: 1rpx solid #ddd;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.flex-cell {
+  flex: 1;
+}
+
+.rowitem {
+  margin: 10px 15px;
+  font-size: 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.item1 {
+  padding-right: 40px;
+}
+
+.item3 {
+  float: right;
+  color: orange;
+}
+
+
+.rowitemNew {
+  margin: 20rpx 0 10rpx 0;
+  display: flex;
+  flex-direction: row;
+  width: 95%;
+  height: 100%;
+  /* background-image: url('https://api.znpoo.com/wxPicture/coupon_5.jpg'); */
+  background-size: contain;
+  margin-left:20rpx;
+}
+
+.item-left {
+  width: 80%;
+}
+
+.item-right {
+  width: 25%;
+}
+
+.item-r-top {
+  /* background-color: orange; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: Center;
+  height: 104rpx;
+  text-indent:-70rpx;
+  color: #fff
+}
+
+.item-r-top text {
+  color: #fff;
+  font-size: 49rpx;
+  font-weight: bold;
+}
+
+.item-r-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: Center;
+  height: 50rpx;
+  text-decoration: underline
+}
+
+.coupon_expire {
+  font-weight: bold;
+  font-size: 45rpx;
+  margin-top:-40rpx;
+  color: #fff;
+}
+/* 优惠券金额 */
+.price{
+  font-size: 123rpx;
+  font-weight:bold;
+  margin-left:70rpx;
+}
+
+.mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  z-index: 9000;
+  opacity: 0.7;
+}
+
+.modalDlg {
+  width: 580rpx;
+  height: 606rpx;
+  position: fixed;
+  top: 50%;
+  left: 0;
+  z-index: 9999;
+  margin: -370rpx 85rpx;
+  background-color: #fff6d9;
+  border-radius: 36rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+button::after {
+  border: none;
+}
+
+.activity-button {
+  margin: -1rpx 0 5rpx 0;
+  width: 80rpx;
+  height: 80rpx;
+ 
+}
+
+.rule_text {
+  color: #fe9b23;
+  font-size: 28rpx;
+  box-sizing: border-box;
+  padding: 45rpx;
+}
+
+.swiper-tab{
+  display: flex;
+  justify-content: space-around;
+}
+.tab {
+  width: 500rpx;
+  height: 80rpx;
+  border: 1rpx solid #ff8b00;
+  border-radius: 40rpx;
+  display: flex;
+  justify-content: space-around;
+  color: #ff8b00;
+  text-align: center;
+  line-height: 80rpx;
+  margin-left: 120rpx;
+  margin-top: 10rpx;
+}
+.list{
+  width: 50%;
+  border-radius: 45rpx
+}

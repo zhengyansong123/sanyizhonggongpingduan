@@ -1,0 +1,27 @@
+/* pages/items/aboutUs/aboutUs.wxss */
+
+.container{
+    height: 100%;
+    width:100%;
+    vertical-align: middle;
+}
+
+.item1{
+    height:80rpx;
+    display:flex;
+    flex-direction:row;
+    font-size: 15px;
+}
+
+.item2{
+    font-size: 12px;
+    line-height: 25px;
+}
+
+
+.rowitem{
+  margin: 10px 20px 10px 20px;
+  font-size: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid #ddd
+}

@@ -1,0 +1,5 @@
+<!--pages/items/myMsg/myMsg.wxml-->
+<text></text>
+
+<view>没人给你发消息，不用看了
+ ^_^ </view>

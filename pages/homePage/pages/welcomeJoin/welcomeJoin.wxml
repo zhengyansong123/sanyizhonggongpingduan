@@ -1,0 +1,64 @@
+<!--pages/index/Component/FormM/FormM.wxml-->
+<import src="../../../../component/model/model.wxml" />
+
+<!--这里用form，name=“nameName1”可以作为form的属性进行 
+（e.detail.value.nameName1）调用,
+form自带有提交和重置按钮，会自动获取表单中所有控件值的改变-->
+
+<view class='pic-top'>
+  <image class="img" mode='widthFix' src='https://api.znpoo.com/wxPicture/join.png' style="height: 100%!important"></image>
+</view>
+
+<!-- form - new - 加盟 -->
+<!-- <view class="form-bg">
+  <view class="form">
+    <view class="form-title">
+      <image class="form-title_pic" mode='aspectFit' src='/pages/homePage/image/welcomeJoin-text.png'></image>
+    </view>
+
+    <view class="form-body">
+      <form bindsubmit="formSubmit" bindreset="formReset">
+        <view class="section section_gap">
+          <view class="section__title" style="margin-top: -55rpx">加盟类型*</view>
+          <view class="type">
+            <button bindtap='type_select1' class='{{_num1==true? "type_select":" " }}'>
+              产品代理
+            </button>
+            <button bindtap='type_select2' class='{{_num2==true? "type_select":" " }}'>
+              广告代理
+            </button>
+          </view>
+
+        </view>
+        <view class="section" style="margin-top:-30rpx">
+          <view class="section__title">姓名*</view>
+          <input name="userName" style="background-color: #FFFFFF;color: #DAA979;" placeholder="请输入姓名" placeholder-style="color:#DAA979" bindinput="input_checkname" value='{{name}}' />
+          <view class="checkname" wx:if='{{nameShow}}'>
+            <view bindtap='check' data-sex='先生'> {{firstname}}先生</view>
+            <view bindtap='check' data-sex='女士'> {{firstname}}女士</view>
+          </view>
+
+        </view>
+        <view class="section">
+          <view class="section__title">手机*</view>
+          <input name="mobile" type="number" style="background-color: #FFFFFF;color: #DAA979;" placeholder="请输入手机号" placeholder-style="color:#DAA979" />
+        </view>
+
+        <view class="section">
+          <view class="section__title">区域</view>
+
+          <input disabled='disabled' name="cityDetail" style="background-color: #FFFFFF;color: #DAA979;" placeholder="请选择城市" bindtap="translate" value="{{province}} {{city}} {{county}}" />
+        </view>
+
+        <template is="areaData" data="{{...item}}" />
+
+        <view class="btn-area">
+          <button form-type="submit">提交</button>
+        </view>
+        <view bindtap='makePhoneCall' class="btn-area">
+          <button>咨询客服</button>
+        </view>
+      </form>
+    </view>
+  </view>
+</view> -->

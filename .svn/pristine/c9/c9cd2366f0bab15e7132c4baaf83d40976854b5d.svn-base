@@ -1,0 +1,10 @@
+<!--pages/humor/humor.wxml-->
+
+<!-- 开屏广告 -->
+<view class="pic" >
+  <image src="https://api.znpoo.com/wxPicture/initPic.png"></image>
+  <view class="test" bindtap='skipAdv'>
+  跳过 {{sec}}
+  </view>
+</view>
+

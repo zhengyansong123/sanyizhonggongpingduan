@@ -1,0 +1,66 @@
+/**index.wxss**/
+page{
+ 	font: normal 30rpx/1.68 -apple-system-font, 'Helvetica Neue', Helvetica, 'Microsoft YaHei', sans-serif;height: 100%
+}
+
+.swiper-tab {
+  width: 100%;
+  text-align: center;
+  line-height: 80rpx;
+}
+
+.swiper-tab-list {
+  font-size: 30rpx;
+  display: inline-block;
+  width: 33.33%;
+  color: #777777;
+}
+
+.on {
+  color: #fff;
+  background: #ff8b00
+}
+
+.on1{
+  border-bottom: 5rpx solid #ff8b00
+}
+
+.swiper-box {
+  display: block;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.swiper-box view {
+  text-align: center;
+}
+
+.hide {
+  display: none;
+}
+
+
+
+
+.global-rowitem{
+  margin: 10px 15px;
+  font-size: 12px;
+  padding: 8px 0;
+  border-top: 1px solid #ddd;
+  display:flex;
+}
+.global-item1{
+  flex:2;
+  padding-right: 40px;
+  margin-top:30rpx
+}
+.global-item2{
+  color: #ccc
+}
+.global-item3{
+  flex:2;
+  float: right;
+  color: orange;
+  text-indent: 50rpx;
+}

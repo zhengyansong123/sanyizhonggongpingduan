@@ -1,0 +1,15 @@
+<!--pages/homePage/pages/goods/goods.wxml-->
+<!-- 商品图片 -->
+  <view>
+    <view class="goods-item" wx:for="{{goodsData}}" wx:key="item.id" bindtap="goOut" data-url="{{item.goodsUrl}}">
+      <view data-id="{{item.id}}" >
+        <image src="{{item.goodsImage}}" style='background-color:#E5E5E5'></image>
+      </view>
+      <view>
+        <text>{{item.goodsName}}</text>
+      </view>
+    </view>
+  <view class="goods-more" bindtap="showMore" wx:if='{{show}}'>
+    <text> 加载更多 </text>
+  </view>
+</view>

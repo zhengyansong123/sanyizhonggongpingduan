@@ -1,0 +1,9 @@
+<!--pages/items/helpCenter/helpCenter.wxml-->
+<view class="{{listShow?'':'hide'}}">
+  <view class=""  wx:for="{{records}}" wx:key="{{item.id}}">
+    <view class="rowitem">
+     <!-- <text class="item1">{{item.title}}</text>  -->
+      <text class="item2">{{item.remarks}}</text>
+    </view>
+  </view>
+</view>

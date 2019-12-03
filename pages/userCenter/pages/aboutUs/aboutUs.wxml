@@ -1,0 +1,31 @@
+<!--pages/items/aboutUs/aboutUs.wxml-->
+<!-- <text></text>
+<view class="container">
+  <view class="item1">
+    <view  class="item2">微信公众号</view>
+    <view  class="item3">屏端传媒</view>
+  </view>
+
+  <view class="item1">
+    <view  class="item2">客服电话</view>
+    <view  class="item3" style='font-size:15px'>400-8102-108</view>
+  </view>
+  <view class="item1">
+    <view  class="item2">联系邮箱</view>
+    <view  class="item3">znxcy@znstchina.com</view>
+  </view>
+  <view class="item1">
+    <view  class="item2">公司网址</view>
+    <view  class="item3">http://www.znfoo.com</view>
+  </view>
+</view> -->
+
+
+<view class="{{listShow?'':'hide'}}">
+  <view class=""  wx:for="{{records}}"  wx:key="{{item.id}}">
+    <view class="rowitem">
+      <text class="item1">{{item.description}}</text>
+      <text class="item2">{{item.remarks}}</text>
+    </view>
+  </view>
+</view>

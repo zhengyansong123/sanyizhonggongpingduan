@@ -1,0 +1,30 @@
+<!--pages/wallet/index.wxml-->
+<view class="container">
+  <view class="overage">
+    <view class="overage-header">
+      <text>账户余额（元）</text>
+    </view>
+    <view class="overage-content">
+      <text>{{money}}.00</text>
+    </view>
+    <view class="routing">
+      <image src="../../images/goRecharge.png" bindtap="movetoRecharge"></image>
+      <image src="../../images/goCharging.png" bindtap="movetoCharge"></image>
+    </view>
+
+  </view>
+  <view class="my-ticket tapbar" bindtap="myCoupon" style='margin-bottom:10rpx;margin-top:40rpx'>
+    <view>
+      <image src="../../images/coupon.png" class="img" style="bottom:48rpx;"></image>
+      <text>我的优惠券</text>
+    </view>
+    <image src="../../images/more.png"></image>
+  </view>
+  <view bindtap="transactionDetails" class="about tapbar">
+    <view>
+      <image src="../../images/detail.png" class="img"></image>
+      <text>交易明细</text>
+    </view>
+    <image src="../../images/more.png"></image>
+  </view>
+</view>

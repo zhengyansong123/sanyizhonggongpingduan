@@ -1,0 +1,52 @@
+/* pages/index/coupon/coupon.wxss */
+
+page {
+  height: 100%;
+}
+
+.container {
+  width: 100%;
+  /* background-image: url(https://api.znpoo.com/wxPicture/coupon_bg.jpg); *//* background-size: 100%; *//* height:calc(100% - 100rpx);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; */
+}
+
+.img {
+  width: 100%;
+  display: block;
+}
+
+.activity-desc {
+  margin-top: 722rpx;
+  text-align: center;
+}
+
+.surprise2 {
+  height: 400rpx;
+  background-color: white;
+  margin: 680rpx 37rpx 0 37rpx;
+}
+
+.ranking-list1 {
+  margin: 200rpx 40rpx 0 40rpx;
+  text-align: center;
+  height: 350rpx;
+  /* background-color: green; */
+}
+
+.ranking-list2 {
+  margin: 170rpx 40rpx 0 40rpx;
+  height: 2185rpx;
+  background-color: white;
+}
+
+.forward {
+  text-align: center;
+  width: 80%;
+  bottom: 14rpx;
+  position: fixed;
+  border-radius: 85rpx;
+  overflow: hidden;
+  border:4rpx solid rgb(252, 213, 141)
+}

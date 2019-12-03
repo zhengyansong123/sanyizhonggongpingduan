@@ -1,0 +1,7 @@
+<!-- 
+  1.需要给组件提供一个父元素并指定高度,组件高度由父元素控制。否则将出现问题
+  2.如果需要下拉刷新 ，请不要使用本组件
+-->
+<view class='wrapper'> 
+  <list-html data="{{city}}" my-city="{{myCity}}" binddetail="binddetail"></list-html>
+</view> 

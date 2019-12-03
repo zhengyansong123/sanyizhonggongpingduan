@@ -1,0 +1,366 @@
+/* pages/index/index.wxss */
+page{
+  height:100%;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+}
+
+#map {
+  height: 100%;
+  width: 100%;
+}
+
+.head-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 80rpx;
+  background-color: #ff8b00;
+  /* border-top:1px solid #EAEAEA; */
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 65rpx;
+  height: 65rpx;
+  border-radius: 50%;
+  background-image: url(https://api.znpoo.com/wxPicture/avatar.png);
+  background-size: 100%;
+}
+
+.userinfo-avatar2 {
+  border-radius: 50%;
+  width: 65rpx;
+  height: 65rpx;
+  overflow: hidden;
+  margin: 15rpx 30rpx 1rpx 20rpx;
+  /* background-color: rgb(184, 175, 175); *//* background-image: url(https://api.znpoo.com/wxPicture/avatar.png) */
+  background-image: url(https://api.znpoo.com/wxPicture/avatar.png);
+  background-size: 100%;
+}
+
+.search-container {
+  height: 50rpx;
+  width: 450rpx;
+  /* box-shadow: 1px 1px 2px 1px #565656; */
+  border-radius: 30rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10rpx 30rpx 1rpx 10rpx;
+  background-color: white;
+}
+
+.herder-right {
+  width: 32px;
+  height: 32px;
+  z-index: 999;
+}
+
+.search-container view {
+  flex-grow: 1;
+  padding: 0 10rpx 0 20rpx;
+  height: 40rpx;
+  border-radius: 8rpx;
+  color: #969696;
+  font-size: 30rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+/* .search-container image {
+  height: 30rpx;
+  width: 50rpx;
+} */
+
+.search-menu {
+  width: 100%;
+  height: 100%;
+  /* margin: 20rpx; *//* border-radius: 50%; *//* padding: 10rpx 30rpx 1rpx 30rpx;  */
+}
+
+/*menubar*/
+
+.menubar {
+  height: 80rpx;
+  background: #f4f5f6;
+  /* position: fixed; */
+  left: 0;
+  /* top: 8%; *//* white-space: nowrap; *//* display: flex; */
+}
+
+/* .menu_more {
+  width: 80rpx;
+  height: 80rpx;
+  background: #f4f5f6;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 9;
+} */
+
+/* .menu_more image {
+  width: 50rpx;
+  height: 50rpx;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+} */
+
+.menu {
+  width: 1010rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  background: #f4f5f6;
+}
+
+.menu text {
+  display: inline-block;
+  /* width: 100rpx; */
+  margin: 0 20rpx 0 20rpx;
+  font-size: 32rpx;
+  height: 100%;
+  text-align: center;
+  color: #333;
+}
+
+.menu text.active {
+  color: #d43d3d;
+}
+
+.mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  z-index: 9000;
+  opacity: 0.7;
+}
+
+.modalDlg {
+  width: 558rpx;
+  height: 675rpx;
+  position: fixed;
+  top: 50%;
+  left: 0;
+  z-index: 9999;
+  margin: -370rpx 115rpx;
+  /* background-color: #fff; *//* background-color: red; */
+  border-radius: 36rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+.activity-button {
+  margin: 10px 0 20px 0;
+  color: green;
+  line-height: 70rpx;
+  border-radius: 50%;
+  border-color: green;
+  width: 70rpx;
+}
+
+.close-button {
+  background-color: white;
+  width: 51rpx;
+  height: 51rpx;
+  border-radius: 50%;
+  text-align: center;
+  color: rgb(83, 82, 78);
+  position: absolute;
+  right: 15rpx;
+  top: 15rpx;
+}
+
+.cover-bottom {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+  margin-bottom:100rpx;
+justify-content:center;
+
+}
+
+.cover-bottom-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding:0 30rpx 0 30rpx;
+}
+
+
+.cover-enterprise{
+width:76rpx;
+height:76rpx;
+position: absolute; 
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: 30rpx; 
+  bottom:230rpx;
+}
+
+.cover-location{
+width:39rpx;
+position:relative;
+left:48%;
+bottom:666rpx;
+
+
+
+}
+
+/*底部弹窗开始 -使屏幕变暗  */
+.commodity_screen {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.2;
+  overflow: hidden;
+  z-index: 1000;
+  color: #fff;
+}
+/*对话框 */
+.commodity_attr_box {
+  height: 280rpx;
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 2000;
+  background: #fff;
+  padding-top: 0rpx;
+}
+ 
+.placeBox{
+  width: 100%;
+  height: 150rpx;
+}
+ 
+.placeViewLt{
+  display: inline-block;
+  width: 620rpx;
+  height: 140rpx;
+ 
+  vertical-align: middle;
+}
+ 
+.viewTitle{
+  display: block;
+  font-size: 38rpx;
+  color: #ff8b00;
+  margin-left: 20rpx;
+  padding-top: 34rpx;
+}
+ 
+.viewDis{
+  display: inline-block;
+  font-size: 26rpx;
+  color: gray;
+  margin-left: 20rpx;
+}
+ 
+.viewAddr{
+  display: inline-block;
+  font-size: 28rpx;
+  color: gray;
+  margin-left: 20rpx;
+}
+ 
+.placeViewRt{
+  display: inline-block;
+  width: 120rpx;
+  height: 120rpx;
+  padding-top: 6rpx;
+  vertical-align: middle;
+}
+ 
+.viewIcon{
+  display: block;
+  height: 100rpx;
+  width: 100%;
+  border-top: 1px solid #ebebeb;
+  padding-top: 40rpx;
+}
+ 
+.indexIcon{
+  display: inline-block;
+  width: 50rpx;
+  height: 50rpx;
+  margin-left: 40rpx;
+  vertical-align: middle;
+}
+ 
+.timeText{
+  display: inline-block;
+  line-height: 45rpx;
+  margin-left: 2rpx;
+  text-align: center;
+  width: 200rpx;
+  height: 45rpx;
+  background-color: rgb(230, 234, 255);
+  border-radius: 10px;
+  color: #ff8b00;
+  font-size: 24rpx;
+}
+ 
+.indexIcon1{
+  display: inline-block;
+  width: 50rpx;
+  height: 50rpx;
+  margin-left: 110rpx;
+  vertical-align: middle;
+}
+ 
+.indexIcon2{
+  display: inline-block;
+  width: 50rpx;
+  height: 50rpx;
+  margin-left: 20rpx;
+  vertical-align: middle;
+}
+ 
+.timeText1{
+  display: inline-block;
+  line-height: 45rpx;
+  margin-left: 12rpx;
+  width: 80rpx;
+  height: 45rpx;
+  color: #ff8b00;
+  font-size: 24rpx;
+}
+ 
+.timeText2{
+  display: inline-block;
+  line-height: 45rpx;
+  margin-right: 30rpx;
+  float: right;
+  height: 45rpx;
+  color: #ff8b00;
+  font-size: 24rpx;
+}
+
+.confirmButton{
+  background-color: #ff8b00;
+  border-radius: 40%;
+  color: #fff;
+  padding: 20rpx 40rpx;
+  font-size: 40rpx;
+}

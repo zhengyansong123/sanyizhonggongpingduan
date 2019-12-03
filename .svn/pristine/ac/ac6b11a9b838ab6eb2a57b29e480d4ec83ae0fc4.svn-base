@@ -1,0 +1,15 @@
+
+
+<view scroll-y="true" class="container">
+  <!-- 活动图片 -->
+  <view>
+    <image class="img" mode='widthFix' src='https://api.znpoo.com/wxPicture/chargingGuide.png?v={{nowDate}}'></image>
+  </view>
+</view>
+
+
+<!-- 下一步 -->
+  <view style='display:flex;flex-direction:column;align-items:center;' bindtap='toCharging'>
+    <button class="forward  {{flag ? 'check' :''}}" disabled='{{flag}}' >下一步</button>
+</view> 
+
